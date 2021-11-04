@@ -19,8 +19,13 @@
     "node": ">=14.15.0"
   },
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.39.0",
+    "@aws-sdk/lib-dynamodb": "^3.39.0",
+    "@aws-sdk/util-dynamodb": "^3.39.0",
     "@middy/core": "^1.5.2",
-    "@middy/http-json-body-parser": "^1.5.2"
+    "@middy/http-json-body-parser": "^1.5.2",
+    "aws-sdk": "^2.1021.0",
+    "serverless-dotenv-plugin": "^3.10.0"
   },
   "devDependencies": {
     "@serverless/typescript": "^2.23.0",

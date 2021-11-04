@@ -14,6 +14,7 @@ custom:
 plugins:
   - 'serverless-esbuild'
   - 'serverless-offline'
+  - 'serverless-dotenv-plugin'
 
 provider:
   name: aws
@@ -33,3 +34,10 @@ functions:
       - http:
           method: get
           path: api/hello
+  dynamoCreateTable:
+   handler: src/controllers/dynamodbController.createTable
+   events:
+      - http:
+          method: get
+          path: api/dynamoDB/createTable
+         
