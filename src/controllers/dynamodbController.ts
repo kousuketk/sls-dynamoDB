@@ -2,9 +2,9 @@ import { APIGatewayProxyHandler } from 'aws-lambda';
 import * as AWS from 'aws-sdk';
 
 AWS.config.update({
-  region: '',
-  accessKeyId: '',
-  secretAccessKey: ''
+  region: process.env.DYNAMODB_REGION,
+  accessKeyId: process.env.DYNAMODB_ACCESSKEYID,
+  secretAccessKey: process.env.DYNAMODB_SECRETACCESSKEY
 });
 const dynamodb = new AWS.DynamoDB();
 
